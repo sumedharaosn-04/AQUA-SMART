@@ -22,7 +22,7 @@ AquaSmart also focuses on making water conservation engaging through features su
 - **Theme Customisation:** Supports light, dark, and system-based appearance settings.
 
 ## 🔗 Live Demo
-[Click here to explore AquaSmart](YOUR_LIVE_APP_LINK)
+https://sumedharaosn-04.github.io/AQUA-SMART/
 
 ## 🎯 Project Objective
 
