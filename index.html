@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AquaSmart | Water Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#">
+      <span class="brand-mark"><i data-lucide="droplets"></i></span>
+      <span><strong>AquaSmart</strong><small>WATER INTELLIGENCE</small></span>
+    </a>
+
+    <div class="workspace-label">WORKSPACE</div>
+
+    <nav class="nav-list">
+      <button class="nav-link active" data-page="dashboard">Dashboard</button>
+      <button class="nav-link" data-page="control">Tap Control</button>
+      <button class="nav-link" data-page="monitoring">Water Monitoring</button>
+      <button class="nav-link" data-page="savings">Water Savings</button>
+      <button class="nav-link" data-page="alerts">Alerts</button>
+      <button class="nav-link" data-page="rewards">Rewards</button>
+      <button class="nav-link" data-page="devices">Device Management</button>
+      <button class="nav-link" data-page="insights">AI Insights</button>
+      <button class="nav-link" data-page="tips">Conservation Tips</button>
+      <button class="nav-link" data-page="reports">Reports</button>
+      <button class="nav-link" data-page="leaderboard">Leaderboard</button>
+      <button class="nav-link" data-page="activity">Activity History</button>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="demo-note">
+        <span class="pulse"></span>
+        <div><b>Demo environment</b><small>Simulated device data</small></div>
+      </div>
+      <button class="nav-link" data-page="settings">Settings</button>
+      <button class="nav-link" data-page="help">Help & About</button>
+      <div class="profile-mini">
+        <div class="avatar">S</div>
+        <div><b id="sideUser">Sumedha</b><small>Home workspace</small></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-area">
+    <header class="topbar">
+      <button class="icon-button mobile-menu" id="menuToggle">☰</button>
+      <div class="breadcrumb">
+        Workspace / <b id="pageCrumb">Dashboard</b>
+      </div>
+      <div class="top-actions">
+        <span class="connection">● Demo system online</span>
+        <button class="icon-button" id="themeQuick">◐</button>
+        <button class="icon-button" data-page="alerts">♧</button>
+      </div>
+    </header>
+
+    <div class="content" id="pageContent"></div>
+
+    <footer class="footer">
+      <span>© 2026 AquaSmart</span>
+      <span>Designed for responsible water use</span>
+      <span>Demonstration data · No physical hardware connected</span>
+    </footer>
+  </main>
+</div>
+
+<div class="toast-region" id="toastRegion"></div>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>Add a tap</h3>
+      <button class="icon-button" id="modalClose">✕</button>
+    </div>
+    <form id="tapForm">
+      <label>Tap name
+        <input id="tapName" required placeholder="Kitchen washbasin">
+      </label>
+      <label>Location
+        <select id="tapLocation">
+          <option>Kitchen</option>
+          <option>Bathroom</option>
+          <option>Garden</option>
+          <option>Washbasin</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <div class="modal-actions">
+        <button type="button" class="button" id="cancelModal">Cancel</button>
+        <button class="button button-primary" type="submit">Add tap</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
